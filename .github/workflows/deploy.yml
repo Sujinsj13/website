@@ -5,14 +5,17 @@ on:
     branches:
       - dev
 
+  workflow_dispatch:
+
 permissions:
   contents: read
-  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -23,18 +26,46 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Install Amplify CLI
-        run: npm install -g @aws-amplify/cli
-
       - name: Build website
         run: |
-          mkdir -p build
+          rm -rf build
+          mkdir build
+
           cp index.html build/
           cp style.css build/
           cp script.js build/
 
-      - name: Deploy to Amplify
+      - name: Create deployment
+        id: deployment
         run: |
-          amplify publish \
-            --appId ${{ secrets.AMPLIFY_APP_ID }} \
-            --branchName dev
+          JOB=$(aws amplify create-deployment \
+            --app-id "${{ secrets.AMPLIFY_APP_ID }}" \
+            --branch-name "${{ secrets.AMPLIFY_BRANCH }}")
+
+          echo "JOB_ID=$(echo "$JOB" | jq -r '.jobId')" >> "$GITHUB_OUTPUT"
+          echo "ZIP_UPLOAD_URL=$(echo "$JOB" | jq -r '.zipUploadUrl')" >> "$GITHUB_OUTPUT"
+
+      - name: Create deployment ZIP
+        run: |
+          cd build
+          zip -r ../website.zip .
+          cd ..
+
+      - name: Upload website
+        run: |
+          curl -X PUT \
+            -T website.zip \
+            "${{ steps.deployment.outputs.ZIP_UPLOAD_URL }}"
+
+      - name: Start deployment
+        run: |
+          aws amplify start-deployment \
+            --app-id "${{ secrets.AMPLIFY_APP_ID }}" \
+            --branch-name "${{ secrets.AMPLIFY_BRANCH }}" \
+            --job-id "${{ steps.deployment.outputs.JOB_ID }}"
+
+      - name: Deployment information
+        run: |
+          echo "Deployment started successfully"
+          echo "Amplify App ID: ${{ secrets.AMPLIFY_APP_ID }}"
+          echo "Branch: ${{ secrets.AMPLIFY_BRANCH }}"
