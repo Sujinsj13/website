@@ -1,67 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sujin S - Cloud Infrastructure & DevOps Engineer portfolio">
+  <title>Sujin S | Cloud & DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">MyWebsite</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="nav">
+    <a class="logo" href="#home">Sujin<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-btn" href="#contact">Let's Connect</a>
+  </header>
 
+  <main>
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Website</h1>
-            <p>Building amazing digital experiences</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+      <div class="hero-content">
+        <p class="eyebrow">CLOUD INFRASTRUCTURE • DEVOPS • AUTOMATION</p>
+        <h1>Building reliable<br><span>cloud infrastructure.</span></h1>
+        <p class="hero-text">
+          Cloud & DevOps Engineer focused on AWS, GCP, Infrastructure as Code,
+          CI/CD, containers, monitoring and secure production operations.
+        </p>
+        <div class="actions">
+          <a class="primary" href="#projects">View Projects</a>
+          <a class="secondary" href="#contact">Contact Me</a>
         </div>
+      </div>
+      <div class="terminal">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>devops@cloud:~</span></div>
+        <div class="terminal-body">
+          <p><b>$</b> whoami</p>
+          <p class="green">sujin@devops-engineer</p>
+          <p><b>$</b> skills --list</p>
+          <p class="muted">AWS · GCP · Terraform · Docker</p>
+          <p class="muted">Jenkins · GitHub Actions · Linux</p>
+          <p class="muted">CloudWatch · Grafana · Kubernetes</p>
+          <p><b>$</b> status</p>
+          <p class="green">● Infrastructure online</p>
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are dedicated to creating innovative solutions that help businesses grow and succeed in the digital world.</p>
+    <section id="about" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>Engineering with an automation mindset.</h2>
+      </div>
+      <div class="about-grid">
+        <p>
+          I work across cloud infrastructure, DevOps automation and production
+          operations. My focus is making deployments repeatable, infrastructure
+          manageable as code, and systems observable and secure.
+        </p>
+        <div class="stats">
+          <div><strong>4+</strong><span>Years Experience</span></div>
+          <div><strong>AWS</strong><span>Primary Cloud</span></div>
+          <div><strong>IaC</strong><span>Terraform</span></div>
+          <div><strong>CI/CD</strong><span>Automation</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Web Development</h3>
-                <p>Custom websites tailored to your needs</p>
-            </div>
-            <div class="service-card">
-                <h3>Design</h3>
-                <p>Beautiful, user-friendly interfaces</p>
-            </div>
-            <div class="service-card">
-                <h3>Consulting</h3>
-                <p>Expert advice for your digital strategy</p>
-            </div>
+    <section id="skills" class="section dark">
+      <div class="section-heading">
+        <p class="eyebrow">02 / TOOLBOX</p>
+        <h2>Technologies I work with.</h2>
+      </div>
+      <div class="skill-grid">
+        <article><span>☁</span><h3>Cloud</h3><p>AWS · GCP · EC2 · S3 · RDS · Lambda · CloudFront · Route 53 · IAM · WAF</p></article>
+        <article><span>⌘</span><h3>DevOps</h3><p>Terraform · Jenkins · GitHub Actions · Git · CI/CD · Infrastructure Automation</p></article>
+        <article><span>▣</span><h3>Containers</h3><p>Docker · Docker Compose · Kubernetes · EKS · Containerized workloads</p></article>
+        <article><span>◉</span><h3>Observability</h3><p>CloudWatch · Grafana · Logs · Alerts · Production troubleshooting</p></article>
+        <article><span>⚙</span><h3>Linux</h3><p>Amazon Linux · Ubuntu · Shell scripting · Cron · System administration</p></article>
+        <article><span>🔐</span><h3>Security</h3><p>IAM · Security Groups · WAF · Secrets Manager · SIEM logging · Access control</p></article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">03 / PROJECTS</p>
+        <h2>Selected infrastructure work.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project">
+          <span class="project-no">01</span>
+          <h3>Cloud Migration</h3>
+          <p>Migrated application infrastructure from GCP to AWS, including compute, networking, security and production readiness.</p>
+          <div class="tags"><span>AWS</span><span>GCP</span><span>EC2</span><span>Networking</span></div>
+        </article>
+        <article class="project">
+          <span class="project-no">02</span>
+          <h3>Terraform Automation</h3>
+          <p>Built Infrastructure as Code workflows for repeatable provisioning, planning, change review and deployment.</p>
+          <div class="tags"><span>Terraform</span><span>GitHub</span><span>CI/CD</span></div>
+        </article>
+        <article class="project">
+          <span class="project-no">03</span>
+          <h3>Patch Automation</h3>
+          <p>Designed an automated patching flow with backups, patch execution, reboot handling, compliance reporting and notifications.</p>
+          <div class="tags"><span>Lambda</span><span>SSM</span><span>SNS</span></div>
+        </article>
+        <article class="project">
+          <span class="project-no">04</span>
+          <h3>Security & Logging</h3>
+          <p>Worked on WAF, CloudWatch and S3 logging flows to support security visibility, auditing and SIEM integration.</p>
+          <div class="tags"><span>WAF</span><span>CloudWatch</span><span>S3</span><span>SIEM</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section dark">
+      <div class="section-heading">
+        <p class="eyebrow">04 / EXPERIENCE</p>
+        <h2>Cloud operations in production.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span>2022 — Present</span>
+          <div><h3>Senior Cloud Infrastructure / DevOps</h3><p>Vivriti Capital · Chennai, India</p></div>
         </div>
+        <div class="timeline-item">
+          <span>Focus</span>
+          <div><h3>Infrastructure • Automation • Reliability</h3><p>AWS & GCP cloud operations, CI/CD, Terraform, Linux administration, monitoring and production support.</p></div>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
+      <p class="eyebrow">05 / CONTACT</p>
+      <h2>Let's build something reliable.</h2>
+      <p>Open to Cloud Infrastructure and DevOps opportunities.</p>
+      <div class="contact-links">
+        <a href="mailto:sujinraj13@gmail.com">sujinraj13@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sujin-s-956b29223/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2026 MyWebsite. All rights reserved.</p>
-    </footer>
+  <footer>© <span id="year"></span> Sujin S · Cloud & DevOps Engineer</footer>
+  <script src="script.js"></script>
 </body>
 </html>
