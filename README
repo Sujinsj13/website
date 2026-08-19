@@ -1,0 +1,97 @@
+# My Website
+
+A modern, responsive website ready for deployment on GitHub Pages.
+
+## 🚀 Deploy to GitHub Pages
+
+Follow these steps to deploy your website:
+
+### Step 1: Create a GitHub Repository
+
+1. Go to [GitHub](https://github.com/) and log in
+2. Click the "+" icon in the top-right corner and select "New repository"
+3. Name your repository (e.g., `my-website`)
+4. Make it **Public**
+5. Click "Create repository"
+
+### Step 2: Upload Your Files
+
+**Option A: Using Git Command Line**
+
+```bash
+# Navigate to your website folder
+cd website
+
+# Initialize git repository
+git init
+
+# Add all files
+git add .
+
+# Commit
+git commit -m "Initial commit"
+
+# Add your GitHub repository as remote
+git remote add origin https://github.com/YOUR_USERNAME/my-website.git
+
+# Push to GitHub
+git push -u origin main
+```
+
+**Option B: Using GitHub Web Interface**
+
+1. In your new repository, click "uploading an existing file"
+2. Drag and drop `index.html` and `styles.css`
+3. Click "Commit changes"
+
+### Step 3: Enable GitHub Pages
+
+1. Go to your repository on GitHub
+2. Click on **Settings** (top menu)
+3. Click on **Pages** (left sidebar)
+4. Under "Source", select:
+   - Branch: `main` (or `master`)
+   - Folder: `/ (root)`
+5. Click **Save**
+
+### Step 4: Access Your Website
+
+After a few minutes, your website will be live at:
+```
+https://YOUR_USERNAME.github.io/my-website/
+```
+
+## 📁 File Structure
+
+```
+website/
+├── index.html      # Main HTML file
+├── styles.css      # Stylesheet
+└── README.md       # This file
+```
+
+## 🎨 Features
+
+- Responsive design (mobile-friendly)
+- Modern gradient hero section
+- Navigation menu
+- Services section with cards
+- Contact form
+- Clean, professional design
+
+## 🛠️ Customization
+
+Edit `index.html` to change:
+- Text content
+- Navigation links
+- Form fields
+
+Edit `styles.css` to change:
+- Colors
+- Fonts
+- Spacing
+- Layout
+
+## 📝 License
+
+Free to use and modify!
