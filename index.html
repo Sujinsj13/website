@@ -1,67 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">MyWebsite</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sujin S is a Cloud and DevOps Engineer focused on reliable cloud infrastructure, automation, and production operations."
+    />
+    <meta name="theme-color" content="#090c09" />
+    <title>Sujin S | Cloud &amp; DevOps Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M6.5 18a4.5 4.5 0 0 1-.8-8.9A6.5 6.5 0 0 1 18 8a5 5 0 0 1 .5 10Z"/></symbol>
+      <symbol id="icon-workflow" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></symbol>
+      <symbol id="icon-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 10 9-5M12 12 3 7m9 5v10"/></symbol>
+      <symbol id="icon-activity" viewBox="0 0 24 24"><path d="M2 12h4l3-8 6 16 3-8h4"/></symbol>
+      <symbol id="icon-terminal" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m6 9 3 3-3 3m7 0h5"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 21 6v6c0 5-9 10-9 10S3 17 3 12V6Zm-4 10 3 3 5-6"/></symbol>
+    </svg>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="wordmark" href="#home" aria-label="Sujin, home"><span class="brand-mark" aria-hidden="true">✦</span>SUJIN<span class="brand-dot">.</span></a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Website</h1>
-            <p>Building amazing digital experiences</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-inner shell">
+          <p class="eyebrow"><span class="status-dot"></span>Cloud &amp; DevOps Engineer</p>
+          <h1>Building reliable<br /><span>cloud infrastructure.</span></h1>
+          <p class="hero-copy">
+            Cloud &amp; DevOps Engineer focused on AWS, GCP, Infrastructure as Code, CI/CD,
+            containers, monitoring, and secure production operations.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View Projects <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="hero-note"><span class="status-dot"></span>Based in Chennai, India <span class="note-divider">/</span> Infrastructure · Automation · Reliability</div>
         </div>
-    </section>
+        <div class="floating-tile tile-cloud" aria-hidden="true"><svg class="line-icon"><use href="#icon-cloud"/></svg></div>
+        <div class="floating-tile tile-terminal" aria-hidden="true"><svg class="line-icon"><use href="#icon-terminal"/></svg></div>
+        <div class="floating-tile tile-cube" aria-hidden="true"><svg class="line-icon"><use href="#icon-cube"/></svg></div>
+        <div class="floating-tile tile-workflow" aria-hidden="true"><svg class="line-icon"><use href="#icon-workflow"/></svg></div>
+        <div class="floating-tile tile-shield" aria-hidden="true"><svg class="line-icon"><use href="#icon-shield"/></svg></div>
+      </section>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are dedicated to creating innovative solutions that help businesses grow and succeed in the digital world.</p>
-    </section>
+      <div class="tech-strip shell" aria-label="Core technologies"><span>Built with an automation mindset</span><ul><li>AWS</li><li>GCP</li><li>Terraform</li><li>Docker</li><li>GitHub Actions</li></ul></div>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Web Development</h3>
-                <p>Custom websites tailored to your needs</p>
-            </div>
-            <div class="service-card">
-                <h3>Design</h3>
-                <p>Beautiful, user-friendly interfaces</p>
-            </div>
-            <div class="service-card">
-                <h3>Consulting</h3>
-                <p>Expert advice for your digital strategy</p>
-            </div>
+      <section class="section shell" id="about">
+        <p class="section-label">01 / About</p>
+        <div class="section-heading-row">
+          <h2>Engineering with<br /><span class="accent-text">an automation mindset.</span></h2>
+          <div class="about-copy">
+            <p>
+              I work across cloud infrastructure, DevOps automation, and production operations.
+              My focus is making deployments repeatable, infrastructure manageable as code, and
+              systems observable and secure.
+            </p>
+            <p>
+              Across AWS, GCP, and Azure, I build practical improvements that reduce manual work
+              and help teams respond to production issues with confidence.
+            </p>
+          </div>
         </div>
-    </section>
+        <div class="stats-grid" aria-label="Experience summary">
+          <div class="stat"><strong>4<span>+</span></strong><span>Years experience</span><svg class="stat-icon line-icon" aria-hidden="true"><use href="#icon-terminal"/></svg></div>
+          <div class="stat"><strong>3</strong><span>Cloud platforms</span><svg class="stat-icon line-icon" aria-hidden="true"><use href="#icon-cloud"/></svg></div>
+          <div class="stat"><strong>40<span>%</span></strong><span>Faster alert response</span><svg class="stat-icon line-icon" aria-hidden="true"><use href="#icon-activity"/></svg></div>
+          <div class="stat"><strong>IaC</strong><span>Terraform workflows</span><svg class="stat-icon line-icon" aria-hidden="true"><use href="#icon-workflow"/></svg></div>
+        </div>
+      </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
-    </section>
+      <section class="section section-tint" id="skills">
+        <div class="shell">
+          <p class="section-label">02 / Toolbox</p>
+          <div class="section-heading-row section-heading-single">
+            <h2>Technologies I work with.</h2>
+            <p class="section-intro">Tools for building, operating, and improving production systems.</p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card"><span class="skill-icon" aria-hidden="true"><svg class="line-icon"><use href="#icon-cloud"/></svg></span><h3>Cloud</h3><p>AWS · GCP · Azure · EC2 · S3 · RDS · Lambda · API Gateway · IAM</p></article>
+            <article class="skill-card"><span class="skill-icon" aria-hidden="true"><svg class="line-icon"><use href="#icon-workflow"/></svg></span><h3>DevOps</h3><p>Terraform · Jenkins · GitHub Actions · Git · CI/CD · Deployment gating</p></article>
+            <article class="skill-card"><span class="skill-icon" aria-hidden="true"><svg class="line-icon"><use href="#icon-cube"/></svg></span><h3>Containers</h3><p>Docker · Kubernetes · Helm · EKS · Containerized workloads</p></article>
+            <article class="skill-card"><span class="skill-icon" aria-hidden="true"><svg class="line-icon"><use href="#icon-activity"/></svg></span><h3>Observability</h3><p>CloudWatch · Anomaly Detection · Grafana · Logs · Alerts · AI-assisted RCA</p></article>
+            <article class="skill-card"><span class="skill-icon" aria-hidden="true"><svg class="line-icon"><use href="#icon-terminal"/></svg></span><h3>Automation</h3><p>Python · Bash · AWS Lambda · Backups · Patching · Runbooks</p></article>
+            <article class="skill-card"><span class="skill-icon" aria-hidden="true"><svg class="line-icon"><use href="#icon-shield"/></svg></span><h3>Security &amp; operations</h3><p>Least-privilege IAM · Azure AD · RBAC · Jira · ServiceNow · Incident response</p></article>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-        <p>&copy; 2026 MyWebsite. All rights reserved.</p>
-    </footer>
-</body>
+      <section class="section shell" id="projects">
+        <p class="section-label">03 / Projects</p>
+        <div class="section-heading-row section-heading-single">
+          <h2>Selected infrastructure work.</h2>
+          <p class="section-intro">A few examples of the systems and workflows I have worked on.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card"><span class="project-number">01</span><div><h3>Cloud migration</h3><p>Migrated application infrastructure from GCP to AWS, covering compute, networking, security, and production readiness.</p><ul class="tags"><li>AWS</li><li>GCP</li><li>EC2</li><li>Networking</li></ul></div></article>
+          <article class="project-card"><span class="project-number">02</span><div><h3>Terraform automation</h3><p>Moved AWS provisioning into modular, version-controlled Terraform workflows with remote state and reviewed plans.</p><ul class="tags"><li>Terraform</li><li>GitHub</li><li>CI/CD</li><li>IaC</li></ul></div></article>
+          <article class="project-card"><span class="project-number">03</span><div><h3>Patch automation</h3><p>Designed an automated patching flow with backups, patch execution, reboot handling, compliance reporting, and notifications.</p><ul class="tags"><li>Lambda</li><li>SSM</li><li>SNS</li><li>Automation</li></ul></div></article>
+          <article class="project-card"><span class="project-number">04</span><div><h3>Security &amp; logging</h3><p>Improved security visibility and audit support through WAF, CloudWatch, and S3 logging flows with SIEM integration.</p><ul class="tags"><li>WAF</li><li>CloudWatch</li><li>S3</li><li>SIEM</li></ul></div></article>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="experience">
+        <div class="shell">
+          <p class="section-label">04 / Experience</p>
+          <div class="section-heading-row section-heading-single">
+            <h2>Cloud operations<br /><span class="accent-text">in production.</span></h2>
+          </div>
+          <div class="experience-list">
+            <article class="experience-item">
+              <div class="experience-date">2022 — Present</div>
+              <div class="experience-main">
+                <h3>Senior Cloud Infrastructure / DevOps</h3>
+                <p class="company">Vivriti Capital <span>·</span> Chennai, India</p>
+              </div>
+            </article>
+            <article class="experience-item">
+              <div class="experience-date">Focus</div>
+              <div class="experience-main">
+                <h3>Infrastructure • Automation • Reliability</h3>
+                <p class="experience-description">AWS &amp; GCP cloud operations, CI/CD, Terraform, Linux administration, monitoring and production support.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="shell contact-inner">
+          <p class="section-label">05 / Contact</p>
+          <div class="contact-row">
+            <div><h2>Let's build something reliable.</h2><p>Open to Cloud Infrastructure and DevOps opportunities.</p></div>
+            <a class="button button-primary" href="mailto:sujinraj13@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:sujinraj13@gmail.com">sujinraj13@gmail.com</a>
+            <a href="https://www.linkedin.com/in/sujin-s-956b29223/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/sujinsj13" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="shell">© <span id="year">2026</span> Sujin S <span>·</span> Cloud &amp; DevOps Engineer</div></footer>
+  </body>
 </html>
